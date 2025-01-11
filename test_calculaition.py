@@ -1,6 +1,6 @@
 import unittest
 from calculations import *
-from xmlrunner 
+from xmlrunner import XMLTestRunner
 class TestArthimeticOperations(unittest.TestCase):
     def test_add(self):
         self.assertEqual(add(1,2),3)
@@ -70,4 +70,4 @@ def load_tests(loader,standar_tests,pattern):
 if __name__ == '__main__':
     report_dir = os.path.abspath("test-outputs")
     os.makedirs(report_dir, exist_ok=True)
-    unittest.main(testRunner=xmlrunner.XMLTestRunner(output=report_dir))
+    unittest.main(testRunner=XMLTestRunner(output=report_dir))
